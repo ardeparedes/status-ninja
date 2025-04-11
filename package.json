@@ -1,0 +1,37 @@
+{
+  "name": "status-ninja",
+  "version": "1.0.0",
+  "description": "API Health Check and Telegram Bot for Notifications",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "migrate": "wrangler d1 execute status_ninja --file=./migrations/0000_initial.sql",
+    "create-db": "wrangler d1 create status_ninja",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "monitoring",
+    "telegram",
+    "bot",
+    "api",
+    "health",
+    "check"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "drizzle-orm": "^0.30.6",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240613.0",
+    "@eslint/js": "^9.24.0",
+    "@types/uuid": "^9.0.8",
+    "eslint": "^9.24.0",
+    "globals": "^16.0.0",
+    "typescript": "^5.4.3",
+    "typescript-eslint": "^8.30.1",
+    "wrangler": "^4.10.0"
+  }
+}
